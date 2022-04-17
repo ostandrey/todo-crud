@@ -51,3 +51,7 @@ body {
 .options i {
     cursor: pointer;
 }
+
+#msg {
+    color: red;
+}
