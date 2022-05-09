@@ -1,6 +1,10 @@
 body {
     font-family: sans-serif;
     background: #e5e5e5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .app {
@@ -10,7 +14,10 @@ body {
     border-radius: 5px;
     padding: 15px;
     background: white;
+    overflow-y: scroll;
 }
+
+.app::-webkit-scrollbar {width: 0 !important;}
 
 #addNew {
     display: flex;
@@ -28,14 +35,14 @@ body {
     border-radius: 3px;
 }
 
-#tags {
+#tasks {
     display: grid;
     gap: 14px;
 }
 
-#tags div {
+#tasks div {
     background-color: darkslategray;
-    border: 3px darkolivegreen;
+    border: 3px solid darkolivegreen;
     padding: 5px;
     border-radius: 6px;
     display: grid;
