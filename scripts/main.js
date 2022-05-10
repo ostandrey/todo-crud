@@ -26,16 +26,22 @@ let formValidation = () => {
     }
 }
 
-let data = {}
+let data = []
 
 let acceptData = () => {
-    data['text'] = textInput.value;
-    data['date'] = dateInput.value;
-    data['description'] = textarea.value;
+    data.push({
+        text: textInput.value,
+        date: dateInput.value,
+        description: textarea.value,
+    });
+
+    localStorage.setItem('data', JSON.stringify(data));
+
     createData()
 }
 
 let createData = () => {
+    data.map()
     tasks.innerHTML += `
     <div>
       <span class="fw-bold">${data.text}</span>
@@ -71,3 +77,7 @@ let resetForm = () => {
     dateInput.value = '';
     textarea.value = '';
 }
+
+(() => {
+    data =localStorage.getItem('data')
+})()
